@@ -15,7 +15,7 @@ ackground = pygame.image.load('bg.jpg')
 running = True
 while running:
 
-    # Gérer les événementsstyfgtgyuu
+    # Gérer les événement
     for event in pygame.event.get():
         # Ignorer les événements de type pygame.QUIT
         if event.type != pygame.QUIT:
