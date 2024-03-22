@@ -1,30 +1,35 @@
-import  pygame
+# Importer les modules nécessaires
+import pygame
+
+# Initialiser pygame
 pygame.init()
 
-#generer la fenetre de notre jeu
+# Créer la fenêtre
 pygame.display.set_caption("comet fall Game")
-pygame.display.set_mode((500,300))
+pygame.display.set_mode((1080, 720))
 
-# impoter de charger l'arriere plan de notre jeu
-background = pygame.image.load('asset/pelouse.jpg')
+# insertion de l'arriere plan
+ackground = pygame.image.load('bg.jpg')
 
+# Boucle principale du jeu
 running = True
-
-#boucle tant que cette condition est vrai
 while running:
 
-      # applique l'arriere plan de notre jeu
-       screen.blit(pelouse, (0,0))
+    # Gérer les événementsstyfgtgyuu
+    for event in pygame.event.get():
+        # Ignorer les événements de type pygame.QUIT
+        if event.type != pygame.QUIT:
+            # Traiter les autres événements
 
-      # mettre a jour l'ecran
-      pygame.display.flip()
+    # Mettre à jour l'affichage
+         pygame.display.update()
 
-      # si le joueur ferme cette fenetre
-      for event in pygame.event.get():
-        # que l'evenement est fermeture de fenetre
-        if event.type == pygame.QUIT:
-           running = False
-           pygame.quit()
-           print("ferture du jeu")
+# Vérifier si l'utilisateur a cliqué sur le bouton de fermeture de la fenêtre
+if pygame.event.get(pygame.QUIT):
+    running = False
+
+# Fermer la fenêtre
+pygame.quit()
+print("fermiture du jeu")
 
 
